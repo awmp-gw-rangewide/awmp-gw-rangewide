@@ -1,0 +1,106 @@
+MANAGEMENT PARAMETERS         CASE  GF01AA
+Base Case: 1%, FNeed=19-40; Tau=1950
+
+NAME OF PARAMETER FILE               FILNAM  GF01AA.PAR
+NAME OF CONDITIONING DATA FILE       MATNAM  MATRIXF.DAT
+No. OF TRIALS                        NTRIAL  400
+No. OF YEARS IN SIMULATION           NYEAR   100
+YEAR MODEL BEGINS                    ISTART 1600
+YEAR TO BEGIN POPULATION PROJECTION  IYRPRJ 1950
+YEAR MANAGEMENT BEGINS               IYRMAN 2016
+NUMBER OF YEARS OF QUOTA             IQUOTA    5
+MAXIMUM AGE                          MAXAGE   15
+POP.DEN.MODEL <0:Inerta 0:PT >1:Stoc ISTOCH    0
+MSYR COMPONENT      0=1+, 1=Mat      OPTF      0
+MSYL COMPONENT      0=1+, 1=Mat      OPMSYL    0
+DENSITY DEPENDENCE: 0=1+, 1=Mat      OPTDD     0
+TIME DEPENDENCE IN K 0:Const         OPTK      0
+TIME DEPENDENCE IN A 0:Const         OPTA      0
+TIME DEPENDENCE IN M 0:Const         OPTM      0
+LAG IN DENSITY DEPENDENCE            ILAG      0
+NUMBER OF EPISODIC EVENTS            NEVENT    0
+EVENT POPULATION % REDUCTION         EVENTS    0
+1999 EVENT POPULATION % REDUCTION    EVENT1    0
+EVENT TYPE 0:Uniform 1: Juvs 1st     OPTEE     0
+HISTORIC CATCH OPTION 1=50:50 catch  OPTHC     0
+INTEGRATED TRIAL     0=No, 1=Yes     OPTI      0
+MINIMUM CALVING INTERVAL             NY        0
+TARGET YEAR                          IYRTAR 2005
+CORRELATION IN RECRUITMENT           RHO     0.000              Not used if ISTOCH=-1 or 0
+VARIATION IN ENVIRONMENTAL IMPACT    SIGE**2 0.0                Not used if ISTOCH=-1 or 0
+FUTURE CATCH MALE FRAC               CRATIO  0.5
+FUTURE CATCH MALE FRAC (BYCATCH)     CRATIO2 0.5
+FUTURE CATCH MALE FRAC (CANADA)      CRATIO3 0.5
+HISTORIC CATCH BIAS                  BIASC   1.0
+SIGMA FEC NOISE                      SIGFEC  0.0
+PROW FEC NOISE                       PROWFEC -0.700
+SURVEY SELECTIVITY (MALES)           SELSUVM 1.000
+SURVEY SELECTIVITY (FEMALES)         SELSUVF 1.000
+INITIAL CANADIAN CATCH               CANADA1   0.0
+FINAL CANADIAN CATCH                 CANADAF   0.0
+YEAR OF FIRST CATCH                  ICAT1  1600
+CATCH BIAS APPLIES UP TO             ICATB  1914
+AGE OF RECRUITMENT                   AREC    1.0
+NEED ENVELOPE                        NEEDI     2
+    Abundance data:
+YEAR OF 1ST HISTORIC SURVEY          ISUR1  1987
+YEAR OF 1ST GENERATED SURVEY         IGSURV 2023
+STRATEGIC SURVEYS?       0=No 1=Yes  STRATG    0
+DETERMINISTIC ABUNDANCE  0=No 1=Yes  OPTDET    0
+CV OPTION: READ IN 0=ETA or 1=CVTRUE OPTCV     2              
+FREQUENCY OF ABUNDANCE ESTIMATES     IFREQ    12
+FUTURE BIAS FORM 0=linear, 1=cyclic  OPTB      0
+FIRST HISTORIC SURVEY BIAS           BIASH1  1.00
+FINAL HISTORIC SURVEY BIAS           BIASH2  1.00
+BIAS IN YEAR 25                      BIAS    1.00
+BIAS IN FINAL YEAR                   BIASF   1.00
+NO. OF DEGREES OF FREEDOM            DOF     19.00
+CV OF ABUNDANCE ESTIMATE             CV1EST  0.35                           # UPDATE
+BETA PARAMETER 1                     BETA1    3.0
+BETA PARAMETER 2                     BETA2    7.0
+INDEX OF FUTURE SERIES               SINDX     1
+CONDITIONING SEED                    ISEEDC -65001
+    Priors:
+PRIOR FOR MSYL                               UNIFORM
+MINIMUM VALUE                                0.6000
+MAXIMUM VALUE                                0.6000
+PRIOR FOR MSYR                               UNIFORM
+MINIMUM VALUE                                0.0250
+MAXIMUM VALUE                                0.0250
+PRIOR FOR TRANSITION AGE (TRANSA)            DUNIFORM
+MINIMUM VALUE                                0.0000
+MAXIMUM VALUE                                0.0000
+PRIOR FOR JUVENILE SURVIVAL (NOT USED)       UNIFORM
+MINIMUM VALUE                                0.9000
+MAXIMUM VALUE                                0.9000
+PRIOR FOR ADULT SURVIVAL (ADULTS)            UNIFORM                        # UPDATE (Done)
+MINIMUM VALUE                                0.9000
+MAXIMUM VALUE                                0.9950
+PRIOR FOR 1/MAX PREGNANCY RATE (1/PREGTG)    UNIFORM                        # UPDATE (Done)
+MINIMUM VALUE                                1.7000
+MAXIMUM VALUE                                3.3000
+PRIOR FOR AGE AT MATURITY (+1 = AGEM)        DUNIFORM                       # UPDATE (Done)
+MINIMUM VALUE                                 4.000
+MAXIMUM VALUE                                14.000
+PRIOR FOR VALUE TO BE HIT ('000s)            NORMAL                         # UDPATE (Done)
+MEAN                                          3.230
+STANDARD DEVIATION                            0.440
+MINIMUM VALUE                                 0.000
+MAXIMUM VALUE                                99.000
+PRIOR FOR ADDITIONAL VARIANCE (CVadd)        UNIFORM
+MINIMUM VALUE                                 0.000
+MAXIMUM VALUE                                 0.350
+PRIOR FOR ALPHA (Pbias)                      UNIFORM
+MINIMUM VALUE                                 0.811
+MAXIMUM VALUE                                 0.811
+PRIOR FOR CARRYING CAPACITY (in 1000s)       UNIFORM                        # CHECK (Done)
+MINIMUM VALUE                                 0.000
+MAXIMUM VALUE                                20.000
+PRIOR FOR INERTIA MODEL GAMMA                UNIFORM   NOT USED IF ISTOCH.GE.0
+MINIMUM VALUE                                 0.000
+MAXIMUM VALUE                                 2.000
+PRIOR FOR INERTIA MODEL AR                   UNIFORM   NOT USED IF ISTOCH.GE.0
+MINIMUM VALUE                                 1.000
+MAXIMUM VALUE                                 1.000
+
+
